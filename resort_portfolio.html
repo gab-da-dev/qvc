@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <title>QVC - Resort Portfolio</title>
+  <style>
+    .member {
+      display: none;
+      position: fixed;
+      bottom: 35%;
+      right: 0px;
+      font: bold 0.9em/1.2em Arial, Helvetica, sans-serif;
+      color: white;
+      text-decoration: none;
+      /* padding: 10px 0px 15px 0px; */
+      padding: 30px;
+      background-color: #7c046d;
+      opacity: 0.8;
+      text-align: center;
+      z-index: 20;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .navbar-nav li {
+      list-style: none outside none;
+      display: inline-block;
+      padding: 0px 0px 0px 0px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .navbar-nav a {
+      font-family: 'Arial';
+      text-decoration: none;
+      color: #3751a3 !important;
+      font-size: 1.0em;
+      letter-spacing: 0px;
+    }
+
+    .navbar-light .navbar-nav .active>.nav-link {
+      color: rgb(123, 41, 112) !important;
+    }
+
+    a.footerContactLinks {
+      color: white;
+      text-decoration: none;
+      text-align: left;
+    }
+
+    a.footerContactLinks:hover {
+      color: #606060;
+    }
+
+    p {
+      font-family: 'Arial';
+      color: #818181;
+      font-size: 14px;
+      /* line-height: 150%; */
+      margin-bottom: 0;
+    }
+
+    h1.grey {
+      font-family: 'Arial';
+      color: #707070;
+      line-height: 100%;
+      margin: 0px;
+      margin-bottom: 25px;
+      font-size: 30px;
+      font-weight: normal;
+    }
+
+    .explore-btn {
+      font-family: 'Arial';
+      border: 1px solid white;
+      padding: 0px 5px 0px 5px;
+      font-size: 11px;
+      display: inline-block;
+      float: left;
+      margin-top: 10px;
+      font-style: italic;
+      text-decoration: none;
+      color: white;
+    }
+
+    .family-holiday p {
+      margin-bottom: 0px !important;
+      color: #fff !important;
+      font-weight: bolder;
+    }
+
+    .custom-hr {
+      height: 4px;
+      width: 100%;
+      background-color: #7c046d;
+    }
+
+    .footerText {
+      font-family: 'Arial';
+      color: #606060;
+      font-size: 12px;
+      padding-left: 20px;
+      line-height: 190%;
+    }
+
+    .grey-block {
+      background-color: #b8b8b8;
+    }
+
+    .subMenuFont {
+      font-family: 'Arial';
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 0%;
+      margin: 0;
+      color: white;
+      text-decoration: none;
+    }
+
+    a.footerLinks:hover {
+      color: #7c046d !important;
+    }
+
+    .grey-block {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding: .5rem 14%;
+    }
+
+    .grey-block a:hover {
+      color: #3751a3;
+      text-decoration: none;
+    }
+
+    .outerWrapperBenefits {
+      color: white;
+      background: #7c046d;
+      padding: 10px;
+      font-size: 16px;
+      font-family: 'Arial';
+      font-weight: bold;
+      height: 186px;
+      margin-bottom: 5px;
+    }
+
+    p.blockTextWhite {
+      font-family: 'Arial';
+      font-weight: normal;
+      font-size: 14px;
+      text-align: left;
+      color: white;
+    }
+
+    a.innerWrapperBenefits {
+      font-family: 'Arial';
+      border: 1px solid white;
+      padding: 2px 5px 3px 5px;
+      font-size: 11px;
+      display: inline-block;
+      float: right;
+      margin-top: 0px;
+      font-style: italic;
+      text-decoration: none;
+      color: white;
+      margin-top: 10px;
+    }
+
+    .holiday-option {
+
+      background: #7c046d;
+      height: 90px;
+      padding: 10px;
+      font-size: 16px;
+      font-family: 'Arial';
+      font-weight: bold;
+      line-height: 100%;
+      text-align: left;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+
+    .holiday-option p {
+      font-size: 14px;
+      color: white !important;
+    }
+
+    a.footerLinks {
+      color: #606060;
+      text-decoration: none;
+      text-align: left;
+    }
+
+
+
+    @media (min-width: 576px) {
+      .menu-padding {
+        padding-left: 0% !important;
+      }
+
+      .navbar {
+        padding: 0 !important;
+      }
+    }
+
+
+    @media (min-width: 768px) {
+      .menu-padding {
+        padding-left: 30%;
+      }
+    }
+
+
+    @media (min-width: 992px) {
+      .menu-padding {
+        padding-left: 30% !important;
+      }
+
+      .navbar {
+        padding: 0 !important;
+        background-color: #fff !important;
+        padding: .5rem 14% !important;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .menu-padding {
+        padding-left: 30% !important;
+      }
+
+      .navbar {
+        padding: 0 !important;
+        background-color: #fff !important;
+        padding: .5rem 14% !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light" style="">
+    <!-- <div class="container" style="padding-right: 10%;
+        padding-left: 10%;"> -->
+    <!-- <div class="row"> -->
+    <!-- <div class="col-md-8 offset-md-2"> -->
+    <!-- <div class="col-4"> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand mx-auto" href="#">
+      <img src="img/logo.jpg" width="200" height="55" class="d-inline-block align-top" alt="">
+      <!-- Bootstrap -->
+    </a>
+    <!-- </div> -->
+    <!-- <div class="col-8"> -->
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto menu-padding">
+        <li class=" nav-item text-center active">
+          <a class="nav-link" href="#">Resort Portfolio</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link" href="#">Our Club</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link" href="#">Member Feedback</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link" href="#">FAQs</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link" href="#">Member Specials</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+      </ul>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+  </nav>
+
+  <div class="grey-block">
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+      <li class="nav-item text-center col-sm-12 col-md-4 p-0">
+        <a class="subMenuFont" href="#" style="padding:4px 10px 0px 10px;">MEMBER LOUNGE HOW-TO-GUIDE</a>
+      </li>
+      <li class="nav-item text-center col-sm-12 col-md-3 p-0">
+        <a class="subMenuFont" href="#" style="padding:4px 10px 0px 10px;">MEMBER LOGIN</a>
+      </li>
+      <li class="nav-item text-center col-sm-12 col-md-2 p-0">
+        <a class="subMenuFont" href="#" style="padding:4px 10px 0px 10px;">REGISTER</a>
+      </li>
+      <li class="nav-item text-center col-sm-12 col-md-3 p-0">
+        <a class="subMenuFont" href="#" style="padding:4px 10px 0px 10px;">BOOK ONLINE</a>
+      </li>
+    </ul>
+
+
+  </div>
+
+  <div class="jumbotron rounded-0" style="background-image: url('img/back2.jpg'); background-repeat: no-repeat;
+    background-size: auto;background-size: cover;background-position: center;">
+    <!-- <div class="row">
+      <div class="col-md-4">
+       
+
+      </div>
+    </div> -->
+    <div class="container" style="padding: 0px 10%;">
+      <p class="display-6"
+        style="background-color: rgba(124, 4, 109, 0.5);color: white; font-weight: bold; width: 200px; padding: 25px;font-size: 1em;">
+        CREATING MOMENTS OF SHEER DELIGHT AND A LIFETIME OF MEMORIES</p>
+    </div>
+  </div>
+
+  <!-- <div class="container"> -->
+
+
+  <div class="container" style="padding: 0px 10%;">
+    <div class="row">
+
+      <div class="col-lg-8 p-0">
+        <h1 class="grey">OUR CLUB</h4>
+          <p>You are QVC, the holiday ownership elite. You hold the key to unforgettable holidays for the rest of your
+            life. This quality membership grants you the opportunity to explore, discover and experience carefully
+            selected African destinations and an array of International getaways through our exchange partners. Whether
+            you seek an adventurous breakaway, a relaxing retreat or seaside serenity, your QVC membership lets you
+            decide.<br><br>
+
+            Taking the road less travelled is always more rewarding. Whether you have been planning for ages or it is a
+            spontaneous, spur of the moment decision - this is your QVC, your holiday, your destinations, your rules. We
+            have the history and the knowledge; you have the power to construct the getaway of your dreams.<br><br>
+
+            Live to make memories. Love the experience. Leave only to return.</p><br>
+
+          <p> <a href="covid19-lockdown.php" style="color: inherit">COVID-19 RELATED NEWS AND UPDATES - CLICK
+              HERE</a><br><br><br>
+          </p>
+
+          <h1 class="grey">MEMBER BENEFITS</h2>
+
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="outerWrapperBenefits">
+                  <h5 class="">BENEFIT #1</h5>
+
+                  <p class="blockTextWhite">At our QVC Club Resorts, excellence and member experiences is at the heart
+                    of the resort management
+                    philosophy.</p>
+
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="outerWrapperBenefits">
+                  <h5>BENEFIT #2</h5>
+
+                  <p class="blockTextWhite">The Club has a wide variety of resorts, destinations and types of holiday
+                    experiences to choose
+                    from.</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="outerWrapperBenefits">
+                  <h5>BENEFIT #3</h5>
+
+                  <p class="blockTextWhite">Club members are able to treat friends and family to a holiday, by securing
+                    a Guest Certificate
+                    booking.</p>
+
+                  <a class="innerWrapperBenefits" style="background-color: #7c046d;">explore ></a>
+                </div>
+              </div>
+            </div>
+      </div>
+      <div class="col-lg-4 p-0">
+        <img src="img/web badge_3.jpg" alt="">
+        <div class="card rounded-0 ml-4" style="width: 18rem;">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="background-color: #7c046d; color:white">"No matter where I go,
+              travel is my destination!"</li>
+            <li class="list-group-item"
+              style="background-color:#b8b8b8; color:white; padding:25px; height:330; font-size:22px; font-family:'Arial'; line-height:1.3;">
+              <a href="">DOWNLOAD MEMBER
+                LOUNGE HOW-TO-GUIDE</a></li>
+            <li class="list-group-item"
+              style="background-color:#dfdfdf; color:white; padding:25px 20px 15px 20px; height:330; font-size:22px; font-family:'Arial'; color:#7c7c7c; line-height:100%;">
+              Exchange & Rental Partners
+              <div class="row" style="padding: 0 7%;">
+                <a href="exchange_rental_partners.php"><img src="img/RCIsmall.png" width="60" height="24" border="0"
+                    alt="rci logo"></a>
+                <a href="exchange_rental_partners.php#7across"><img src="img/7across_home.png" width="60" height="38"
+                    border="0" alt="7Across logo"></a>
+                <a href="exchange_rental_partners.php#gomelo" alt="gomelo logo"><img
+                    src="https://www.qvc.co.za/images/gomelo-small.png" width="120" height="41" border="0"></a>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="holiday-options mt-4">
+      <div class="row">
+        <div class="col-sm holiday-option">
+          <p>FAMILY HOLIDAYS</p><br>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+        </div>
+        <!-- <div class="w-100 d-none col-lg-2 d-sm-block"></div> -->
+        <div class="col-sm holiday-option">
+          <p>PAMPER / SPA BREAKS</p>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+        </div>
+        <!-- <div class="w-100 d-none col-lg-2 d-lg-block"></div> -->
+        <div class="col-sm holiday-option">
+          <p>BUSH / WILDLIFE</p><br>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+        </div>
+        <!-- <div class="w-100 d-none col-lg-2 d-lg-block"></div> -->
+        <div class="col-sm holiday-option">
+          <!-- <div class="row"> -->
+          <p>ADVENTURE & SPORTS</p>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+          <!-- </div> -->
+        </div>
+        <div class="col-sm holiday-option">
+          <p>BEACH & SEASIDE</p>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+        </div>
+        <div class="col-sm holiday-option">
+          <p>CULTURAL GETAWAYS</p>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm holiday-option">
+          <p>NATURE ESCAPES</p>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+        </div>
+        <div class="col-sm holiday-option">
+          <p>INTO AFRICA</p><br>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+        </div>
+        <div class="col-sm holiday-option">
+          <p>SUB - URBAN BREAKS</p>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+        </div>
+        <div class="col-sm holiday-option">
+          <p>ROMANTIC RETREATS</p>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+        </div>
+        <div class="col-sm holiday-option">
+          <p>LONE
+            TRAVELLER</p><br>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+        </div>
+        <div class="col-sm holiday-option">
+          <p>DIGITAL
+            DETOX</p><br>
+          <a class="innerWrapperBenefits" style="background-color: #7c046d;">holiday options ></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="custom-hr">
+
+    <div class="explore-section mb-4">
+      <div class="row">
+        <div class="col-lg-2">
+          <div class="row">
+            <p class="ml-4">EXPLORE QVC</p>
+          </div>
+          <div class="row" style="background-color:#dfdfdf; height:222px">
+            <ul class="footerText pt-2 ">
+              <a href="resort_portfolio.php" class="footerLinks">Resort Portfolio</a><br>
+              <a href="our_club.php" class="footerLinks">Our Club</a><br>
+              <a href="feedback.php" class="footerLinks">Member Feedback</a><br>
+              <a href="faq.php" class="footerLinks">FAQ</a><br>
+              <a href="contact_us.php" class="footerLinks">Contact Us</a><br>
+              <a href="specials.php" class="footerLinks">Member Specials</a><br>
+              <a href="http://online.qvc.co.za/login/auth" class="footerLinks">Member Login</a>
+              <!--   <a href="portal-notice.php" class="footerLinks">Member Login</a>-->
+              <br>
+              <a href="http://online.qvc.co.za/login/auth" class="footerLinks">Book Online</a>
+              <!-- <a href="portal-notice.php" class="footerLinks">Book Online</a>-->
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-10">
+          <div class="row">
+            <p class="ml-4">QVC CLUB DESTINATIONS</p>
+          </div>
+          <div class="row" style="background-color:#c4c4c4;">
+            <div class="col-lg-3 col-md-6">
+              <ul class="pt-2 footerText">
+                <a href="resorts/baywater_village.php" class="footerLinks">Baywater Village</a><br>
+                <a href="resorts/caribbean_estates.php" class="footerLinks">Caribbean Estates</a><br>
+                <a href="resorts/crystal_springs.php" class="footerLinks">Crystal Springs</a><br>
+                <a href="resorts/doornkop.php" class="footerLinks">Doornkop Fish &amp; Wildlife<br>
+                  Reserve</a><br>
+                <a href="resorts/durban_spa.php" class="footerLinks">Durban Spa</a><br>
+                <!--<a href="resorts/garden_route_chalets.php" class="footerLinks">Garden Route Chalets</a><br/>-->
+                <a href="resorts/kagga_kamma.php" class="footerLinks">Kagga Kamma</a><br>
+                <a href="resorts/kridzil.php" class="footerLinks">Kridzil</a><br>
+                <a href="resorts/kruger_park_lodge.php" class="footerLinks">Kruger Park Lodge</a>
+              </ul>
+
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <ul class="pt-2 footerText">
+                <a href="resorts/little_eden.php" class="footerLinks">Little Eden</a><br>
+                <a href="resorts/mabalingwe_nature_reserve.php" class="footerLinks">Mabalingwe Nature
+                  Reserve</a><br>
+                <a href="resorts/magaliespark.php" class="footerLinks">Magalies Park</a><br>
+                <a href="resorts/manzi_monate.php" class="footerLinks">Manzi Monate</a><br>
+                <a href="resorts/mnarani.php" class="footerLinks">Mnarani</a><br>
+                <a href="resorts/modumela_lodge.php" class="footerLinks">Modumela Lodge</a><br>
+                <a href="resorts/monateng_safari_lodge.php" class="footerLinks">Monateng Safari
+                  Lodge</a><br>
+                <a href="resorts/mount_amanzi.php" class="footerLinks">Mount Amanzi</a>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <ul class="pt-2 footerText">
+                <ul class="footerText">
+                  <a href="resorts/ngwenya_lodge.php" class="footerLinks">Ngwenya Lodge</a><br>
+                  <a href="resorts/sandy_place.php" class="footerLinks">Sandy Place</a><br>
+                  <a href="resorts/st_michaels_sands.php" class="footerLinks">St Michaels
+                    Sands</a><br>
+                  <a href="resorts/sudwala_lodge.php" class="footerLinks">Sudwala Lodge</a><br>
+                  <a href="resorts/tortuga.php" class="footerLinks">Tortuga</a><br>
+                  <a href="resorts/uvongo.php" class="footerLinks">Uvongo</a>
+                </ul>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <ul class="pt-2 footerText" style="color:white;">
+                <a href="contact_us.php" class="footerContactLinks">Contact us</a><br>
+                <a href="privacy_policy.php" class="footerContactLinks">Privacy Policy</a><br>
+                <a href="terms_of_use.php" class="footerContactLinks">Terms &amp; Conditions</a></ul>
+              <br>
+              <p class="footerText">QVC Managing Agent</p>
+              <a href="vrs.php"><img src="img/VRS.png" width="150" height="54" border="0"></a>
+              <ul class="footerText">
+
+              </ul>
+              <ul class="footerText" style="color:white;">
+
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="first-footer">
+    <p style="text-align:center;"><a href="http://africanblessings.co.za/" target="_blank"><img
+          src="img/african_blessings_logo.png" width="150" height="35" border="0"></a>
+      <a href="http://voasa.co.za/#home" target="_blank"><img src="img/VOASA.png" width="150" height="35"
+          border="0"></a></p>
+  </div>
+  <div class="second-footer" style="background-color:#7c046d;">
+    <p style="font-size:11px; color:white; text-align:center;">Privacy Policy<br>
+      Website Terms of Use<br>
+      Copyright © 2021 Quality Vacation Club All Rights Reserved</p>
+  </div>
+
+
+  <div class="member" style="display: block;">
+    <a href="https://www.qvc.co.za/notices.php" style="text-decoration:none; color:white;">
+      <div class="notice">MEMBER<br>NOTICES</div>
+      <div class="readmore">read here</div>
+    </a>
+  </div>
+
+  <div class="cookieinfo"
+    style="position: fixed; left: 0px; right: 0px; height: auto; min-height: 21px; z-index: 2147483647; background: rgb(238, 238, 238); color: rgb(51, 51, 51); line-height: 21px; padding: 8px 18px; font-family: Montserrat, sans-serif; font-size: 14px; text-align: center; bottom: 0px; opacity: 1;">
+    <div class="cookieinfo-close"
+      style="float: right; display: block; padding: 5px 8px; min-width: 100px; margin-left: 5px; border-radius: 5px; cursor: pointer; color: rgb(0, 0, 0); background: rgb(241, 214, 0); text-align: center;">
+      ✖</div><span style="display:block;padding:5px 0 5px 0;">We use cookies to enhance your experience. By
+      continuing to visit this site you agree to our use of cookies. <a href="privacy_policy.php"
+        style="text-decoration: none; color: rgb(49, 168, 240);">More info</a><img
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="display: none;">
+      <a href="https://cookieinfoscript.com"
+        style="text-decoration: none; display: none; color: rgb(49, 168, 240);">Cookie Info Script</a></span>
+  </div>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+  </script>
+  <script>
+    $('.cookieinfo-close').click(function () {
+      $('.cookieinfo').hide()
+    })
+  </script>
+
+</body>
+
+</html>

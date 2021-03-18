@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>QVC - Resort Portfolio</title>
+    <style>
+        .member {
+            display: none;
+            position: fixed;
+            bottom: 35%;
+            right: 0px;
+            font: bold 0.9em/1.2em Arial, Helvetica, sans-serif;
+            color: white;
+            text-decoration: none;
+            /* padding: 10px 0px 15px 0px; */
+            padding: 30px;
+            background-color: #7c046d;
+            opacity: 0.8;
+            text-align: center;
+            z-index: 20;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .navbar-nav li {
+            list-style: none outside none;
+            display: inline-block;
+            padding: 0px 0px 0px 0px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .navbar-nav a {
+            font-family: 'Arial';
+            text-decoration: none;
+            color: #3751a3 !important;
+            font-size: 1.0em;
+            letter-spacing: 0px;
+        }
+
+        .navbar-light .navbar-nav .active>.nav-link {
+            color: rgb(123, 41, 112) !important;
+        }
+
+        p {
+            font-family: 'Arial';
+            color: #818181;
+            font-size: 14px;
+            line-height: 150%;
+            text-align: justify;
+        }
+
+        h1.grey {
+            font-family: 'Arial';
+            color: #707070;
+            line-height: 100%;
+            margin: 0px;
+            margin-bottom: 25px;
+            font-size: 30px;
+            font-weight: normal;
+        }
+
+        .explore-btn {
+            font-family: 'Arial';
+            border: 1px solid white;
+            padding: 0px 5px 0px 5px;
+            font-size: 11px;
+            display: inline-block;
+            float: left;
+            margin-top: 10px;
+            font-style: italic;
+            text-decoration: none;
+            color: white;
+        }
+
+        .family-holiday p {
+            margin-bottom: 0px !important;
+            color: #fff !important;
+            font-weight: bolder;
+        }
+
+        .custom-hr {
+            height: 4px;
+            width: 100%;
+            background-color: #7c046d;
+        }
+
+        .footerText {
+            font-family: 'Arial';
+            color: #606060;
+            font-size: 12px;
+            padding-left: 20px;
+            line-height: 190%;
+        }
+
+        .grey-block {
+            background-color: #b8b8b8;
+        }
+
+        .subMenuFont {
+            font-family: 'Arial';
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 0%;
+            margin: 0;
+            color: white;
+            text-decoration: none;
+        }
+
+        .grey-block {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding: .5rem 14%;
+        }
+
+        .grey-block a:hover {
+            color: #3751a3;
+            text-decoration: none;
+        }
+
+        a.footerLinks {
+            color: #606060;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        a.footerLinks:hover {
+            color: #7c046d !important;
+        }
+
+        a.footerContactLinks {
+            color: white;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        a.footerContactLinks:hover {
+            color: #606060;
+        }
+
+        .explore-section {}
+
+        @media (min-width: 576px) {
+            .menu-padding {
+                padding-left: 0% !important;
+            }
+
+            .navbar {
+                padding: 0 !important;
+            }
+        }
+
+
+        @media (min-width: 768px) {
+            .menu-padding {
+                padding-left: 30%;
+            }
+        }
+
+
+        @media (min-width: 992px) {
+            .menu-padding {
+                padding-left: 30% !important;
+            }
+
+            .navbar {
+                padding: 0 !important;
+                background-color: #fff !important;
+                padding: .5rem 14% !important;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .menu-padding {
+                padding-left: 30% !important;
+            }
+
+            .navbar {
+                padding: 0 !important;
+                background-color: #fff !important;
+                padding: .5rem 14% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light"
+        style="background-color: #fff !important; padding: .5rem 14%;">
+        <!-- <div class="container" style="padding-right: 10%;
+        padding-left: 10%;"> -->
+        <!-- <div class="row"> -->
+        <!-- <div class="col-md-8 offset-md-2"> -->
+        <!-- <div class="col-4"> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="img/logo.jpg" width="200" height="55" class="d-inline-block align-top" alt="">
+            <!-- Bootstrap -->
+        </a>
+        <!-- </div> -->
+        <!-- <div class="col-8"> -->
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto" style="padding-left: 30%;">
+                <li class="nav-item text-center active">
+                    <a class="nav-link" href="#">Resort Portfolio</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="#">Our Club</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="#">Member Feedback</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="#">FAQs</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="#">Member Specials</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+
+    </nav>
+
+    <div class="grey-block">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+            <li class="nav-item text-center col-sm-12 col-md-4 p-0">
+                <a class="subMenuFont" href="#" style="padding:4px 10px 0px 10px;">MEMBER LOUNGE HOW-TO-GUIDE</a>
+            </li>
+            <li class="nav-item text-center col-sm-12 col-md-3 p-0">
+                <a class="subMenuFont" href="#" style="padding:4px 10px 0px 10px;">MEMBER LOGIN</a>
+            </li>
+            <li class="nav-item text-center col-sm-12 col-md-2 p-0">
+                <a class="subMenuFont" href="#" style="padding:4px 10px 0px 10px;">REGISTER</a>
+            </li>
+            <li class="nav-item text-center col-sm-12 col-md-3 p-0">
+                <a class="subMenuFont" href="#" style="padding:4px 10px 0px 10px;">BOOK ONLINE</a>
+            </li>
+        </ul>
+    </div>
+    <div class="jumbotron rounded-0" style="background-image: url('img/back6.jpg'); background-repeat: no-repeat;
+    background-size: auto;background-size: cover;background-position: center;">
+        <div class="row">
+            <div class="col-md-4">
+                <p class="display-6"
+                    style="background-color: rgba(124, 4, 109, 0.5);color: white; font-weight: bold; width: 200px; padding: 25px;">
+                    CREATING MOMENTS OF SHEER DELIGHT AND A LIFETIME OF MEMORIES</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container"> -->
+
+
+    <div class="container" style="padding: 0px 10%;">
+        <div class="row">
+            <h1 class="grey">RESORT PORTFOLIO</h4>
+                <p>Your QVC portfolio grants you exclusive access to weekend breaks, midweek getaways or full week
+                    holidays with
+                    a range of destinations, resort-types and unit configurations available to suit your needs and
+                    your
+                    preferences. With the new and improved online booking system, booking your ideal holiday has
+                    never
+                    been
+                    easier. Simply follow this handy category guide, decide what your next holiday is going to be
+                    and
+                    access our
+                    convenient, hassle-free and 24/7 online booking portal to secure your next adventure today!</p>
+        </div>
+        <div class="row family-holiday">
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/beach.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #7c046d; width: 71.7%">
+                            <p>FAMILY HOLIDAYS</p>
+                            <button class="explore-btn" style="background-color: #7c046d;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/spa.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #00b089; width: 71.7%">
+                            <p>PAMPER / SPA BREAKS</p>
+                            <button class="explore-btn" style="background-color: #00b089;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/wildlife.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #7c3f04; width: 71.7%">
+                            <p>BUSH & WILDLIFE</p>
+                            <button class="explore-btn" style="background-color: #7c3f04;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/adventure.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #478301; width: 71.7%">
+                            <p>ADVENTURE & SPORT</p>
+                            <button class="explore-btn" style="background-color: #478301;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/beach.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #0091dc; width: 71.7%">
+                            <p>BEACH & SEASIDE</p>
+                            <button class="explore-btn" style="background-color: #0091dc;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/cultural.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #b0005f; width: 71.7%">
+                            <p>CULTURAL GETAWAYS</p>
+                            <button class="explore-btn" style="background-color: #b0005f;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/nature.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #99d200; width: 71.7%">
+                            <p>NATURE ESCAPES</p>
+                            <button class="explore-btn" style="background-color: #99d200;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/africa.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #ff8a00; width: 71.7%">
+                            <p>INTO AFRICA </p>
+                            <button class="explore-btn" style="background-color: #ff8a00;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/sub_urban.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #01017b; width: 71.7%">
+                            <p>SUB - URBAN BREAKS</p>
+                            <button class="explore-btn" style="background-color: #01017b;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/romantic.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #990000; width: 71.7%">
+                            <p>ROMANTIC RETREATS</p>
+                            <button class="explore-btn" style="background-color: #990000;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/lone_traveller.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #999999; width: 71.7%">
+                            <p>LONE TRAVELLER </p>
+                            <button class="explore-btn" style="background-color: #999999;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                <div class="card rounded-0" style="padding: 0;
+            height: fit-content; width: 250px;">
+                    <div class="row no-gutters">
+                        <div class="d-inline">
+                            <img src="img/digital_detox.jpg" alt="...">
+                        </div>
+                        <div class="d-inline p-1" style="background-color: #ff3366; width: 71.7%">
+                            <p>DIGITAL DETOX </p>
+                            <button class="explore-btn" style="background-color: #ff3366;">explore ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-selector p-2 mt-4">
+            <div class="row">
+                <div class="col-lg-5 col-md-6">
+                    <img src="img/FINAL.jpg" width="270" usemap="#provinces">
+                    <map name="provinces">
+                        <!--Northern Cape------------------------>
+                        <area alt="" title="" href="northern_cape.php" shape="poly"
+                            coords="9,160,26,203,45,202,68,233,108,219,149,205,126,187,137,157,111,122,78,133,66,100,66,150,48,170">
+                        <!--Western Cape------------------------->
+                        <area alt="" title="" href="western_cape.php" shape="poly"
+                            coords="28,212,33,254,56,276,116,263,112,240,124,223,99,225,71,238,59,231,37,201">
+                        <!--Eastern Cape------------------------->
+                        <area alt="" title="" href="eastern_cape.php" shape="poly"
+                            coords="119,261,175,255,221,209,203,193,155,201,116,237">
+                        <!--Free State------------------------->
+                        <area alt="" title="" href="free_state.php" shape="poly"
+                            coords="132,186,150,198,175,194,183,170,206,161,216,146,184,132,144,152">
+                        <!--KwaZulu Natal------------------------->
+                        <area alt="" title="" href="kwazulu_natal.php" shape="poly"
+                            coords="209, 189, 224, 203, 245, 171, 264, 133, 219, 141, 207, 167, 214, 172">
+                        <!--Mpumalanga------------------------->
+                        <area alt="" title="" href="mpumalanga.php" shape="poly"
+                            coords="195,132,233,138,255,83,206,109">
+                        <!--North-West------------------------->
+                        <area alt="" title="" href="north_west.php" shape="poly"
+                            coords="103,105,137,151,175,132,177,114,189,101,158,98,145,115">
+                        <!--Gauteng------------------------->
+                        <area alt="" title="" href="gauteng.php" shape="poly" coords="175,123,191,131,209,105,189,106">
+                        <!--Limpopo------------------------->
+                        <area alt="" title="" href="limpopo.php" shape="poly"
+                            coords="167,94,214,102,247,81,244,52,194,49">
+                    </map>
+                </div>
+                <div class="col-lg-7 col-md-6">
+                    <div class="card rounded-0" style="background-color:#dfdfdf; width: 250px;">
+                        <div class="card-body">
+                            <div style="background-color:#dfdfdf;">
+                                <div style="text-align:left; padding:15px 10px 20px 14px; width:250px;">
+                                    <h6 class="grey" style="color:#7a056e;"><img src="img/Magnifying_glass_icon.svg.png"
+                                            width="18" height="20"> RESORT
+                                        FINDER</h6>
+                                </div>
+                                <form name="resortForm">
+                                    <div style="text-align:center;">
+                                        <select name="resorts"
+                                            style="width:90%; background-color:#b8b8b8; font-family:Arial; font-size:14px; color:white;">
+                                            <option value="#" disabled="disabled" selected="true"
+                                                style="font-family:Arial; font-size:14px; color:#7c7c7c;">Select a
+                                                Resort</option>
+                                            <option value="resorts/baywater_village.php" class="resortFinderWhite">
+                                                Baywater Village</option>
+                                            <option value="resorts/caribbean_estates.php" class="resortFinderWhite">
+                                                Caribbean Estates</option>
+                                            <option value="resorts/crystal_springs.php" class="resortFinderWhite">
+                                                Crystal Springs</option>
+                                            <option value="resorts/doornkop.php" class="resortFinderWhite">Doornkop
+                                                Fish
+                                                &amp; Wildlife Reserve</option>
+                                            <option value="resorts/durban_spa.php" class="resortFinderWhite">Durban
+                                                Spa
+                                            </option>
+                                            <!-- <option value="resorts/garden_route_chalets.php" class="resortFinderWhite">Garden Route Chalets</option> -->
+                                            <option value="resorts/kagga_kamma.php" class="resortFinderWhite">Kagga
+                                                Kamma</option>
+                                            <option value="resorts/kridzil.php" class="resortFinderWhite">Kridzil
+                                            </option>
+                                            <option value="resorts/kruger_park_lodge.php" class="resortFinderWhite">
+                                                Kruger Park Lodge</option>
+                                            <option value="resorts/little_eden.php" class="resortFinderWhite">Little
+                                                Eden</option>
+                                            <option value="resorts/mabalingwe_nature_reserve.php"
+                                                class="resortFinderWhite">Mabalingwe Nature Reserve</option>
+                                            <option value="resorts/magaliespark.php" class="resortFinderWhite">
+                                                Magaliespark</option>
+                                            <option value="resorts/manzi_monate.php" class="resortFinderWhite">Manzi
+                                                Monate</option>
+                                            <option value="resorts/mnarani.php" class="resortFinderWhite">Mnarani
+                                            </option>
+                                            <option value="resorts/modumela_lodge.php" class="resortFinderWhite">
+                                                Modumela Lodge</option>
+                                            <option value="resorts/monateng_safari_lodge.php" class="resortFinderWhite">
+                                                Monateng Safari Lodge</option>
+                                            <option value="resorts/mount_amanzi.php" class="resortFinderWhite">Mount
+                                                Amanzi</option>
+                                            <option value="resorts/ngwenya_lodge.php" class="resortFinderWhite">
+                                                Ngwenya
+                                                Lodge</option>
+                                            <option value="resorts/sandy_place.php" class="resortFinderWhite">Sandy
+                                                Place</option>
+                                            <option value="resorts/st_michaels_sands.php" class="resortFinderWhite">
+                                                St
+                                                Michaels Sands</option>
+                                            <option value="resorts/sudwala_lodge.php" class="resortFinderWhite">
+                                                Sudwala
+                                                Lodge</option>
+                                            <option value="resorts/tortuga.php" class="resortFinderWhite">Tortuga
+                                            </option>
+                                            <option value="resorts/uvongo.php" class="resortFinderWhite">Uvongo
+                                            </option>
+                                        </select><br>
+                                    </div>
+                                    <div style="text-align:right; padding:10px 20px 10px 10px;"><input type="button"
+                                            onclick="location=document.resortForm.resorts.options[document.resortForm.resorts.selectedIndex].value;"
+                                            value="GO >>" class="text_button"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+
+        <hr class="custom-hr">
+
+        <div class="explore-section mb-4">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="row">
+                        <p>EXPLORE QVC</p>
+                    </div>
+                    <div class="row" style="background-color:#dfdfdf; height:222px">
+                        <ul class="pt-2 footerText">
+                            <a href="resort_portfolio.php" class="footerLinks">Resort Portfolio</a><br>
+                            <a href="our_club.php" class="footerLinks">Our Club</a><br>
+                            <a href="feedback.php" class="footerLinks">Member Feedback</a><br>
+                            <a href="faq.php" class="footerLinks">FAQ</a><br>
+                            <a href="contact_us.php" class="footerLinks">Contact Us</a><br>
+                            <a href="specials.php" class="footerLinks">Member Specials</a><br>
+                            <a href="http://online.qvc.co.za/login/auth" class="footerLinks">Member Login</a>
+                            <!--   <a href="portal-notice.php" class="footerLinks">Member Login</a>-->
+                            <br>
+                            <a href="http://online.qvc.co.za/login/auth" class="footerLinks">Book Online</a>
+                            <!-- <a href="portal-notice.php" class="footerLinks">Book Online</a>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="row">
+                        <p>QVC CLUB DESTINATIONS</p>
+                    </div>
+                    <div class="row" style="background-color:#c4c4c4;">
+                        <div class="col-lg-3 col-md-6">
+                            <ul class="pt-2 footerText">
+                                <a href="resorts/baywater_village.php" class="footerLinks">Baywater Village</a><br>
+                                <a href="resorts/caribbean_estates.php" class="footerLinks">Caribbean
+                                    Estates</a><br>
+                                <a href="resorts/crystal_springs.php" class="footerLinks">Crystal Springs</a><br>
+                                <a href="resorts/doornkop.php" class="footerLinks">Doornkop Fish &amp; Wildlife<br>
+                                    Reserve</a><br>
+                                <a href="resorts/durban_spa.php" class="footerLinks">Durban Spa</a><br>
+                                <!--<a href="resorts/garden_route_chalets.php" class="footerLinks">Garden Route Chalets</a><br/>-->
+                                <a href="resorts/kagga_kamma.php" class="footerLinks">Kagga Kamma</a><br>
+                                <a href="resorts/kridzil.php" class="footerLinks">Kridzil</a><br>
+                                <a href="resorts/kruger_park_lodge.php" class="footerLinks">Kruger Park Lodge</a>
+                            </ul>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <ul class="pt-2 footerText">
+                                <a href="resorts/little_eden.php" class="footerLinks">Little Eden</a><br>
+                                <a href="resorts/mabalingwe_nature_reserve.php" class="footerLinks">Mabalingwe
+                                    Nature
+                                    Reserve</a><br>
+                                <a href="resorts/magaliespark.php" class="footerLinks">Magalies Park</a><br>
+                                <a href="resorts/manzi_monate.php" class="footerLinks">Manzi Monate</a><br>
+                                <a href="resorts/mnarani.php" class="footerLinks">Mnarani</a><br>
+                                <a href="resorts/modumela_lodge.php" class="footerLinks">Modumela Lodge</a><br>
+                                <a href="resorts/monateng_safari_lodge.php" class="footerLinks">Monateng Safari
+                                    Lodge</a><br>
+                                <a href="resorts/mount_amanzi.php" class="footerLinks">Mount Amanzi</a>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <ul class="pt-2 footerText">
+                                <ul class="footerText">
+                                    <a href="resorts/ngwenya_lodge.php" class="footerLinks">Ngwenya Lodge</a><br>
+                                    <a href="resorts/sandy_place.php" class="footerLinks">Sandy Place</a><br>
+                                    <a href="resorts/st_michaels_sands.php" class="footerLinks">St Michaels
+                                        Sands</a><br>
+                                    <a href="resorts/sudwala_lodge.php" class="footerLinks">Sudwala Lodge</a><br>
+                                    <a href="resorts/tortuga.php" class="footerLinks">Tortuga</a><br>
+                                    <a href="resorts/uvongo.php" class="footerLinks">Uvongo</a>
+                                </ul>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <ul class="pt-2 footerText" style="color:white;">
+                                <a href="contact_us.php" class="footerContactLinks">Contact us</a><br>
+                                <a href="privacy_policy.php" class="footerContactLinks">Privacy Policy</a><br>
+                                <a href="terms_of_use.php" class="footerContactLinks">Terms &amp; Conditions</a>
+                            </ul>
+                            <br>
+                            <p class="footerText">QVC Managing Agent</p>
+                            <a href="vrs.php"><img src="img/VRS.png" width="150" height="54" border="0"></a>
+                            <ul class="footerText">
+
+                            </ul>
+                            <ul class="footerText" style="color:white;">
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="first-footer">
+        <p style="text-align:center;"><a href="http://africanblessings.co.za/" target="_blank"><img
+                    src="img/african_blessings_logo.png" width="150" height="35" border="0"></a>
+            <a href="http://voasa.co.za/#home" target="_blank"><img src="img/VOASA.png" width="150" height="35"
+                    border="0"></a></p>
+    </div>
+    <div class="second-footer" style="background-color:#7c046d;">
+        <p style="font-size:11px; color:white; text-align:center;">Privacy Policy<br>
+            Website Terms of Use<br>
+            Copyright © 2021 Quality Vacation Club All Rights Reserved</p>
+    </div>
+
+
+    <div class="member" style="display: block;">
+        <a href="https://www.qvc.co.za/notices.php" style="text-decoration:none; color:white;">
+            <div class="notice">MEMBER<br>NOTICES</div>
+            <div class="readmore">read here</div>
+        </a>
+    </div>
+
+    <div class="cookieinfo"
+        style="position: fixed; left: 0px; right: 0px; height: auto; min-height: 21px; z-index: 2147483647; background: rgb(238, 238, 238); color: rgb(51, 51, 51); line-height: 21px; padding: 8px 18px; font-family: Montserrat, sans-serif; font-size: 14px; text-align: center; bottom: 0px; opacity: 1;">
+        <div class="cookieinfo-close"
+            style="float: right; display: block; padding: 5px 8px; min-width: 100px; margin-left: 5px; border-radius: 5px; cursor: pointer; color: rgb(0, 0, 0); background: rgb(241, 214, 0); text-align: center;">
+            ✖</div><span style="display:block;padding:5px 0 5px 0;">We use cookies to enhance your experience. By
+            continuing to visit this site you agree to our use of cookies. <a href="privacy_policy.php"
+                style="text-decoration: none; color: rgb(49, 168, 240);">More info</a><img
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="display: none;">
+            <a href="https://cookieinfoscript.com"
+                style="text-decoration: none; display: none; color: rgb(49, 168, 240);">Cookie Info
+                Script</a></span>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <script>
+        $('.cookieinfo-close').click(function () {
+            $('.cookieinfo').hide()
+        })
+    </script>
+</body>
+
+</html>
